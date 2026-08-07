@@ -15,7 +15,13 @@ pagination:
 		echo "Error: TYPE is not set. Use 'make pagination TYPE=offset' or 'make pagination-offset'"; \
 		exit 1; \
 	fi
-	k6 run -e BASE_URL=$(BASE_URL) -e TYPE=$(TYPE) loadtest/pagenation.js
+	k6 run \
+		-e BASE_URL=$(BASE_URL) \
+		-e TYPE=$(TYPE) \
+		-e LIMIT=$(LIMIT) \
+		-e OFFSET=$(OFFSET) \
+		-e CURSOR_DEPTH_PAGES=$(CURSOR_DEPTH_PAGES) \
+		loadtest/pagination.js
 
 pagination-offset: TYPE=offset
 pagination-offset: pagination
