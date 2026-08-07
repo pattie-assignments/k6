@@ -49,7 +49,7 @@ cmd=("$@")
 if [ -z "$explicit_output" ]; then
   timestamp=$(date '+%Y%m%d-%H%M%S')
   # 명령어 앞부분을 슬러그로 만들어 파일명에 포함
-  slug=$(printf '%s-' "${cmd[@]:0:4}" | tr ' ' '-' | tr -c '[:alnum:]_-.+' '-' | sed 's/-$//' | cut -c1-80)
+  slug=$(printf '%s-' "${cmd[@]:0:4}" | tr ' ' '-' | tr -c '[:alnum:]_.+-' '-' | sed 's/-$//' | cut -c1-80)
   OUTPUT_FILE="results/${timestamp}-${slug}.log"
 else
   OUTPUT_FILE="$explicit_output"
