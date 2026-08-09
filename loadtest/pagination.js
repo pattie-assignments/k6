@@ -29,6 +29,9 @@ export function setup() {
 
   for (let page = 0; page < CURSOR_DEPTH_PAGES; page += 1) {
     const res = http.get(buildCursorUrl(cursor), {
+      // setup에서는 next_cursor를 읽어야 하므로 body를 받음
+      responseType: 'text',
+
       tags: {
         pagination: TYPE,
         phase: 'setup',
