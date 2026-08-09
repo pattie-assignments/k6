@@ -53,6 +53,25 @@ if [ -z "$explicit_output" ]; then
   OUTPUT_FILE="results/${timestamp}-${slug}.log"
 else
   OUTPUT_FILE="$explicit_output"
+  if [ -e "$OUTPUT_FILE" ]; then
+    dir=$(dirname "$OUTPUT_FILE")
+    base=$(basename "$OUTPUT_FILE")
+    ext=""
+    name="$base"
+    case "$base" in
+      *.*)
+        ext=".${base##*.}"
+        name="${base%.*}"
+        ;;
+    esac
+
+    i=1
+    while [ -e "$dir/$name-$i$ext" ]; do
+      i=$((i + 1))
+    done
+    OUTPUT_FILE="$dir/$name-$i$ext"
+    echo "Output file exists, using $OUTPUT_FILE" >&2
+  fi
 fi
 
 # 결과 디렉터리 생성
