@@ -1,0 +1,280 @@
+COMMAND: make pagination TYPE=cursor CURSOR_DEPTH_PAGES=2500 LIMIT=20
+
+==== OUTPUT ====
+
+k6 run \
+	-e BASE_URL=http://3.39.39.25:3000/v1 \
+	-e TYPE=cursor \
+	-e LIMIT=20 \
+	-e OFFSET= \
+	-e CURSOR_DEPTH_PAGES=2500 \
+	loadtest/pagination.js
+
+         /\      Grafana   /‾‾/  
+    /\  /  \     |\  __   /  /   
+   /  \/    \    | |/ /  /   ‾‾\ 
+  /          \   |   (  |  (‾)  |
+ / __________ \  |_|\_\  \_____/ 
+
+
+     execution: local
+        script: loadtest/pagination.js
+        output: -
+
+     scenarios: (100.00%) 1 scenario, 300 max VUs, 1m30s max duration (incl. graceful stop):
+              * pagination_load: 100.00 iterations/s for 1m0s (maxVUs: 100-300, gracefulStop: 30s)
+
+
+Run               [ 100% ] setup()
+pagination_load   [   0% ]
+
+Run               [ 100% ] setup()
+pagination_load   [   0% ]
+
+Run               [ 100% ] setup()
+pagination_load   [   0% ]
+
+Run               [ 100% ] setup()
+pagination_load   [   0% ]
+
+Run               [ 100% ] setup()
+pagination_load   [   0% ]
+
+Run               [ 100% ] setup()
+pagination_load   [   0% ]
+
+Run               [ 100% ] setup()
+pagination_load   [   0% ]
+
+Run               [ 100% ] setup()
+pagination_load   [   0% ]
+
+Run               [ 100% ] setup()
+pagination_load   [   0% ]
+
+Run               [ 100% ] setup()
+pagination_load   [   0% ]
+
+Run               [ 100% ] setup()
+pagination_load   [   0% ]
+
+running (0m12.0s), 000/100 VUs, 26 complete and 0 interrupted iterations
+pagination_load   [   0% ] 000/100 VUs  0m00.3s/1m0s  100.00 iters/s
+
+running (0m13.0s), 000/100 VUs, 126 complete and 0 interrupted iterations
+pagination_load   [   2% ] 000/100 VUs  0m01.3s/1m0s  100.00 iters/s
+
+running (0m14.0s), 000/100 VUs, 226 complete and 0 interrupted iterations
+pagination_load   [   4% ] 000/100 VUs  0m02.3s/1m0s  100.00 iters/s
+
+running (0m15.0s), 000/100 VUs, 326 complete and 0 interrupted iterations
+pagination_load   [   5% ] 000/100 VUs  0m03.3s/1m0s  100.00 iters/s
+
+running (0m16.0s), 000/100 VUs, 426 complete and 0 interrupted iterations
+pagination_load   [   7% ] 000/100 VUs  0m04.3s/1m0s  100.00 iters/s
+
+running (0m17.0s), 000/100 VUs, 526 complete and 0 interrupted iterations
+pagination_load   [   9% ] 000/100 VUs  0m05.3s/1m0s  100.00 iters/s
+
+running (0m18.0s), 000/100 VUs, 626 complete and 0 interrupted iterations
+pagination_load   [  10% ] 000/100 VUs  0m06.3s/1m0s  100.00 iters/s
+
+running (0m19.0s), 000/100 VUs, 726 complete and 0 interrupted iterations
+pagination_load   [  12% ] 000/100 VUs  0m07.3s/1m0s  100.00 iters/s
+
+running (0m20.0s), 000/100 VUs, 826 complete and 0 interrupted iterations
+pagination_load   [  14% ] 000/100 VUs  0m08.3s/1m0s  100.00 iters/s
+
+running (0m21.0s), 000/100 VUs, 926 complete and 0 interrupted iterations
+pagination_load   [  15% ] 000/100 VUs  0m09.3s/1m0s  100.00 iters/s
+
+running (0m22.0s), 000/100 VUs, 1026 complete and 0 interrupted iterations
+pagination_load   [  17% ] 000/100 VUs  0m10.3s/1m0s  100.00 iters/s
+
+running (0m23.0s), 000/100 VUs, 1126 complete and 0 interrupted iterations
+pagination_load   [  19% ] 000/100 VUs  0m11.3s/1m0s  100.00 iters/s
+
+running (0m24.0s), 000/100 VUs, 1226 complete and 0 interrupted iterations
+pagination_load   [  20% ] 000/100 VUs  0m12.3s/1m0s  100.00 iters/s
+
+running (0m25.0s), 000/100 VUs, 1326 complete and 0 interrupted iterations
+pagination_load   [  22% ] 000/100 VUs  0m13.3s/1m0s  100.00 iters/s
+
+running (0m26.0s), 000/100 VUs, 1426 complete and 0 interrupted iterations
+pagination_load   [  24% ] 000/100 VUs  0m14.3s/1m0s  100.00 iters/s
+
+running (0m27.0s), 000/100 VUs, 1526 complete and 0 interrupted iterations
+pagination_load   [  25% ] 000/100 VUs  0m15.3s/1m0s  100.00 iters/s
+
+running (0m28.0s), 000/100 VUs, 1626 complete and 0 interrupted iterations
+pagination_load   [  27% ] 000/100 VUs  0m16.3s/1m0s  100.00 iters/s
+
+running (0m29.0s), 000/100 VUs, 1726 complete and 0 interrupted iterations
+pagination_load   [  29% ] 000/100 VUs  0m17.3s/1m0s  100.00 iters/s
+
+running (0m30.0s), 000/100 VUs, 1826 complete and 0 interrupted iterations
+pagination_load   [  30% ] 000/100 VUs  0m18.3s/1m0s  100.00 iters/s
+
+running (0m31.0s), 000/100 VUs, 1926 complete and 0 interrupted iterations
+pagination_load   [  32% ] 000/100 VUs  0m19.3s/1m0s  100.00 iters/s
+
+running (0m32.0s), 000/100 VUs, 2026 complete and 0 interrupted iterations
+pagination_load   [  34% ] 000/100 VUs  0m20.3s/1m0s  100.00 iters/s
+
+running (0m33.0s), 000/100 VUs, 2126 complete and 0 interrupted iterations
+pagination_load   [  35% ] 000/100 VUs  0m21.3s/1m0s  100.00 iters/s
+
+running (0m34.0s), 000/100 VUs, 2226 complete and 0 interrupted iterations
+pagination_load   [  37% ] 000/100 VUs  0m22.3s/1m0s  100.00 iters/s
+
+running (0m35.0s), 000/100 VUs, 2326 complete and 0 interrupted iterations
+pagination_load   [  39% ] 000/100 VUs  0m23.3s/1m0s  100.00 iters/s
+
+running (0m36.0s), 000/100 VUs, 2426 complete and 0 interrupted iterations
+pagination_load   [  40% ] 000/100 VUs  0m24.3s/1m0s  100.00 iters/s
+
+running (0m37.0s), 000/100 VUs, 2526 complete and 0 interrupted iterations
+pagination_load   [  42% ] 000/100 VUs  0m25.3s/1m0s  100.00 iters/s
+
+running (0m38.0s), 000/100 VUs, 2626 complete and 0 interrupted iterations
+pagination_load   [  44% ] 000/100 VUs  0m26.3s/1m0s  100.00 iters/s
+
+running (0m39.0s), 000/100 VUs, 2726 complete and 0 interrupted iterations
+pagination_load   [  45% ] 000/100 VUs  0m27.3s/1m0s  100.00 iters/s
+
+running (0m40.0s), 000/100 VUs, 2826 complete and 0 interrupted iterations
+pagination_load   [  47% ] 000/100 VUs  0m28.3s/1m0s  100.00 iters/s
+
+running (0m41.0s), 000/100 VUs, 2926 complete and 0 interrupted iterations
+pagination_load   [  49% ] 000/100 VUs  0m29.3s/1m0s  100.00 iters/s
+
+running (0m42.0s), 000/100 VUs, 3026 complete and 0 interrupted iterations
+pagination_load   [  50% ] 000/100 VUs  0m30.3s/1m0s  100.00 iters/s
+
+running (0m43.0s), 000/100 VUs, 3126 complete and 0 interrupted iterations
+pagination_load   [  52% ] 000/100 VUs  0m31.3s/1m0s  100.00 iters/s
+
+running (0m44.0s), 000/100 VUs, 3226 complete and 0 interrupted iterations
+pagination_load   [  54% ] 000/100 VUs  0m32.3s/1m0s  100.00 iters/s
+
+running (0m45.0s), 000/100 VUs, 3326 complete and 0 interrupted iterations
+pagination_load   [  55% ] 000/100 VUs  0m33.3s/1m0s  100.00 iters/s
+
+running (0m46.0s), 000/100 VUs, 3426 complete and 0 interrupted iterations
+pagination_load   [  57% ] 000/100 VUs  0m34.3s/1m0s  100.00 iters/s
+
+running (0m47.0s), 000/100 VUs, 3526 complete and 0 interrupted iterations
+pagination_load   [  59% ] 000/100 VUs  0m35.3s/1m0s  100.00 iters/s
+
+running (0m48.0s), 000/100 VUs, 3626 complete and 0 interrupted iterations
+pagination_load   [  60% ] 000/100 VUs  0m36.3s/1m0s  100.00 iters/s
+
+running (0m49.0s), 000/100 VUs, 3726 complete and 0 interrupted iterations
+pagination_load   [  62% ] 000/100 VUs  0m37.3s/1m0s  100.00 iters/s
+
+running (0m50.0s), 000/100 VUs, 3826 complete and 0 interrupted iterations
+pagination_load   [  64% ] 000/100 VUs  0m38.3s/1m0s  100.00 iters/s
+
+running (0m51.0s), 000/100 VUs, 3926 complete and 0 interrupted iterations
+pagination_load   [  65% ] 000/100 VUs  0m39.3s/1m0s  100.00 iters/s
+
+running (0m52.0s), 000/100 VUs, 4026 complete and 0 interrupted iterations
+pagination_load   [  67% ] 000/100 VUs  0m40.3s/1m0s  100.00 iters/s
+
+running (0m53.0s), 000/100 VUs, 4126 complete and 0 interrupted iterations
+pagination_load   [  69% ] 000/100 VUs  0m41.3s/1m0s  100.00 iters/s
+
+running (0m54.0s), 000/100 VUs, 4226 complete and 0 interrupted iterations
+pagination_load   [  70% ] 000/100 VUs  0m42.3s/1m0s  100.00 iters/s
+
+running (0m55.0s), 000/100 VUs, 4326 complete and 0 interrupted iterations
+pagination_load   [  72% ] 000/100 VUs  0m43.3s/1m0s  100.00 iters/s
+
+running (0m56.0s), 000/100 VUs, 4426 complete and 0 interrupted iterations
+pagination_load   [  74% ] 000/100 VUs  0m44.3s/1m0s  100.00 iters/s
+
+running (0m57.0s), 000/100 VUs, 4526 complete and 0 interrupted iterations
+pagination_load   [  75% ] 000/100 VUs  0m45.3s/1m0s  100.00 iters/s
+
+running (0m58.0s), 000/100 VUs, 4626 complete and 0 interrupted iterations
+pagination_load   [  77% ] 000/100 VUs  0m46.3s/1m0s  100.00 iters/s
+
+running (0m59.0s), 000/100 VUs, 4726 complete and 0 interrupted iterations
+pagination_load   [  79% ] 000/100 VUs  0m47.3s/1m0s  100.00 iters/s
+
+running (1m00.0s), 000/100 VUs, 4826 complete and 0 interrupted iterations
+pagination_load   [  80% ] 000/100 VUs  0m48.3s/1m0s  100.00 iters/s
+
+running (1m01.0s), 000/100 VUs, 4926 complete and 0 interrupted iterations
+pagination_load   [  82% ] 000/100 VUs  0m49.3s/1m0s  100.00 iters/s
+
+running (1m02.0s), 000/100 VUs, 5026 complete and 0 interrupted iterations
+pagination_load   [  84% ] 000/100 VUs  0m50.3s/1m0s  100.00 iters/s
+
+running (1m03.0s), 000/100 VUs, 5126 complete and 0 interrupted iterations
+pagination_load   [  85% ] 000/100 VUs  0m51.3s/1m0s  100.00 iters/s
+
+running (1m04.0s), 000/100 VUs, 5226 complete and 0 interrupted iterations
+pagination_load   [  87% ] 000/100 VUs  0m52.3s/1m0s  100.00 iters/s
+
+running (1m05.0s), 000/100 VUs, 5326 complete and 0 interrupted iterations
+pagination_load   [  89% ] 000/100 VUs  0m53.3s/1m0s  100.00 iters/s
+
+running (1m06.0s), 000/100 VUs, 5426 complete and 0 interrupted iterations
+pagination_load   [  90% ] 000/100 VUs  0m54.3s/1m0s  100.00 iters/s
+
+running (1m07.0s), 000/100 VUs, 5526 complete and 0 interrupted iterations
+pagination_load   [  92% ] 000/100 VUs  0m55.3s/1m0s  100.00 iters/s
+
+running (1m08.0s), 000/100 VUs, 5626 complete and 0 interrupted iterations
+pagination_load   [  94% ] 000/100 VUs  0m56.3s/1m0s  100.00 iters/s
+
+running (1m09.0s), 000/100 VUs, 5726 complete and 0 interrupted iterations
+pagination_load   [  95% ] 000/100 VUs  0m57.3s/1m0s  100.00 iters/s
+
+running (1m10.0s), 000/100 VUs, 5826 complete and 0 interrupted iterations
+pagination_load   [  97% ] 000/100 VUs  0m58.3s/1m0s  100.00 iters/s
+
+running (1m11.0s), 000/100 VUs, 5926 complete and 0 interrupted iterations
+pagination_load   [  99% ] 000/100 VUs  0m59.3s/1m0s  100.00 iters/s
+
+
+  █ THRESHOLDS 
+
+    http_req_duration
+    ✓ 'p(95)<500' p(95)=6.62ms
+
+    http_req_failed
+    ✓ 'rate<0.01' rate=0.00%
+
+
+  █ TOTAL RESULTS 
+
+    checks_total.......: 8501    118.527341/s
+    checks_succeeded...: 100.00% 8501 out of 8501
+    checks_failed......: 0.00%   0 out of 8501
+
+    ✓ setup status is 200
+    ✓ status is 200
+
+    HTTP
+    http_req_duration..............: avg=4.6ms  min=3.68ms med=4.41ms max=39.45ms p(90)=4.95ms p(95)=6.62ms
+      { expected_response:true }...: avg=4.6ms  min=3.68ms med=4.41ms max=39.45ms p(90)=4.95ms p(95)=6.62ms
+    http_req_failed................: 0.00%  0 out of 8501
+    http_reqs......................: 8501   118.527341/s
+
+    EXECUTION
+    iteration_duration.............: avg=4.77ms min=3.88ms med=4.57ms max=39.59ms p(90)=5.21ms p(95)=6.84ms
+    iterations.....................: 6001   83.670459/s
+    vus............................: 0      min=0         max=1  
+    vus_max........................: 100    min=100       max=100
+
+    NETWORK
+    data_received..................: 34 MB  472 kB/s
+    data_sent......................: 918 kB 13 kB/s
+
+
+
+
+running (1m11.7s), 000/100 VUs, 6001 complete and 0 interrupted iterations
+pagination_load ✓ [ 100% ] 000/100 VUs  1m0s  100.00 iters/s
