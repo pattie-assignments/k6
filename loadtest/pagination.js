@@ -57,14 +57,14 @@ export function setup() {
       );
     }
 
-    if (!data.has_next || data.next_cursor == null) {
+    if (!data.hasNext || data.nextCursor == null) {
       throw new Error(
         `Unable to reach cursor depth ${CURSOR_DEPTH_PAGES}. ` +
         `Stopped at page ${page + 1}.`,
       );
     }
 
-    cursor = data.next_cursor;
+    cursor = data.nextCursor;
   }
 
   return { cursor };
