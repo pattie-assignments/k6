@@ -12,7 +12,11 @@ function buildOffsetUrl(offset) {
 }
 
 function buildCursorUrl(cursor) {
-  const query = cursor == null ? `limit=${LIMIT}` : `cursor=${cursor}&limit=${LIMIT}`;
+  const query =
+    cursor == null
+      ? `limit=${LIMIT}`
+      : `cursor=${cursor}&limit=${LIMIT}`;
+
   return `${BASE_URL}/posts/cursor?${query}`;
 }
 
@@ -36,19 +40,24 @@ export function setup() {
     });
 
     if (res.status !== 200) {
-      throw new Error(`Failed to fetch cursor page at depth ${page}: ${res.status}`);
+      throw new Error(
+        `Failed to fetch cursor page at depth ${page}: ${res.status}`,
+      );
     }
 
     const body = res.json();
     const data = body?.data;
 
     if (!data) {
-      throw new Error(`Missing response data at cursor depth ${page}`);
+      throw new Error(
+        `Missing response data at cursor depth ${page}`,
+      );
     }
 
     if (!data.has_next || data.next_cursor == null) {
       throw new Error(
-        `Unable to reach cursor depth ${CURSOR_DEPTH_PAGES}. Stopped at page ${page + 1}.`,
+        `Unable to reach cursor depth ${CURSOR_DEPTH_PAGES}. ` +
+        `Stopped at page ${page + 1}.`,
       );
     }
 
@@ -60,6 +69,7 @@ export function setup() {
 
 // k6에서 실제로 반복 실행되는 기본 함수
 export const options = {
+  // 실제 부하 테스트 요청은 응답 body가 필요 없으므로 버림
   discardResponseBodies: true,
 
   scenarios: {
